@@ -1,4 +1,4 @@
-class Clovek:
+class Person:
     def __init__(self, name, course, mozne_hodiny):
         self.name = name
         self.course = course
@@ -11,19 +11,19 @@ class Clovek:
         return self.name
 
 
-class Student(Clovek):
+class Student(Person):
     
     def __init__(self, name, course, mozne_hodiny, cas_kurzu, jeho_kurz, jeho_lektor):
-        Clovek.__init__(self, name, course, mozne_hodiny)
+        Person.__init__(self, name, course, mozne_hodiny)
         self.cas_kurzu = cas_kurzu
         self.jeho_kurz = jeho_kurz
         self.jeho_lektor = jeho_lektor
 
 
-class Lektor(Clovek):
+class Lektor(Person):
     
     def __init__(self, name, course, mozne_hodiny, schedule):
-        Clovek.__init__(self, name, course, mozne_hodiny)
+        Person.__init__(self, name, course, mozne_hodiny)
         self.schedule = schedule
 
 

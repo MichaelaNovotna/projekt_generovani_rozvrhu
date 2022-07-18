@@ -1,4 +1,4 @@
-from modul_tridy import Student, Lektor
+from classes_module import Student, Lektor
 
 
 def _pridej_do_dict_moznych_hod(nadpisy_hodin, mozne_hodiny, casove_moznosti):
@@ -16,8 +16,8 @@ def _pridej_do_dict_schedule(nadpisy_hodin, schedule):
 
 
 def nacti(soubor, je_student):
-    """nacte vstupni soubor radek po radku a rozdeli dle sloupcu na jmeno, kurz a casove moznosti, 
-    a priradi kazdemu cloveku tridu student nebo lektor a zaradi je do listu"""
+    """loads input file line by line and divides it into columns for name, course and availability,
+    and assigns each person a class (student or lector) and puts them into list"""
     list_of_people = []
     with open(soubor, encoding="utf-8") as vstup:
         line_counter = 0
@@ -36,14 +36,14 @@ def nacti(soubor, je_student):
                     clovek = Student(name, course, mozne_hodiny, cas_kurzu="", jeho_kurz="", jeho_lektor="")
                 else:
                     clovek = Lektor(name, course, mozne_hodiny, schedule)
-                list_of_people.append(clovek)        # pridam studenta do seznamu studentu -> vznikne seznam hodnot tridy student
+                list_of_people.append(clovek)        # append student to list of students -> vznikne seznam hodnot tridy student
             line_counter += 1
     return list_of_people
 
 
-def nacti_studenty(soubor):
+def load_students(soubor):
     return nacti(soubor, True)
 
 
-def nacti_lektory(soubor):
+def load_lectors(soubor):
     return nacti(soubor, False)

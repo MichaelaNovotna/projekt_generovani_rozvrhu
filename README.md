@@ -8,7 +8,7 @@ This Python application allows users to generate a schedule for small classes li
 - subjects taught by lectors
 - subject registered by students
 
-## Getting started
+## Getting Started
 Program requires 2 configuration files, input from lectors and input from students. Path for these files including example is:
 * `/input`
 
@@ -19,10 +19,10 @@ with file names:
 * `input_students.csv`
   * with 2 required columns `name`, `course`, followed by available time blocks in format `<weekday hh:mm>`
 
-#### Testing the input
+#### Testing the Input
 Your input can be tested with prepared pytest file that can be found in `/test` directory and can be run with `pytest input_test.py` 
 
-## Running the program and output files
+## Running the Program and Output Files
 Program can be run with `schedule_generator.py` file using Python 3:
 * `./python3 schedule_generator.py`
 

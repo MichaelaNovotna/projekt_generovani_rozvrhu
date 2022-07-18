@@ -22,11 +22,12 @@ with file names:
 #### Testing the Input
 Your input can be tested with prepared pytest file that can be found in `/test` directory and can be run with `pytest input_test.py` 
 
-## Running the Program and Output Files
+## Running the Program and Output
 Program can be run with `schedule_generator.py` file using Python 3:
 * `./python3 schedule_generator.py`
 
-Output of the program is HTML document with constructed schedule visualised as a table for single lector:
+Output of the program is HTML document with constructed schedule visualised as a table for single lector.
+If input contain students without the possibility to be placed, name of the student is printed into the console. The program chooses the schedule with the least non-placed students. 
 
 
 
@@ -34,7 +35,7 @@ Output of the program is HTML document with constructed schedule visualised as a
 Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
 
 ## Limitations
-
+Program places more courses to the first lector.
 
 
 

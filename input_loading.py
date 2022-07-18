@@ -36,7 +36,7 @@ def nacti(soubor, je_student):
                     clovek = Student(name, course, mozne_hodiny, cas_kurzu="", jeho_kurz="", jeho_lektor="")
                 else:
                     clovek = Lektor(name, course, mozne_hodiny, schedule)
-                list_of_people.append(clovek)        # append student to list of students -> vznikne seznam hodnot tridy student
+                list_of_people.append(clovek)        # append student to list of students (for class Student)
             line_counter += 1
     return list_of_people
 

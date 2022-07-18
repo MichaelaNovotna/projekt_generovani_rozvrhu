@@ -1,6 +1,6 @@
 import pytest
-from input_loading import nacti
-from classes_module import Student, Lektor
+from modul_nacteni_vstupu import nacti
+from modul_tridy import Student, Lektor
 
 
 def test_nacteni_s():

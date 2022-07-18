@@ -124,7 +124,7 @@ def _register_course_to_lector_student(kurz, cas, varka, studenti_konkr_kurz):
                     lectors[i].schedule[cas] = kurz + str(varka)
                     course = Kurz(kurz, kurz + str(varka), cas, lectors[i], studenti_konkr_kurz)
                     courses.append(course)
-                    for student in studenti_konkr_kurz:  # pridat atributy
+                    for student in studenti_konkr_kurz:  #add attributes
                         student.cas_kurzu = cas
                         student.jeho_kurz = kurz + str(varka)
                         student.jeho_lektor = lectors[i]
@@ -132,7 +132,7 @@ def _register_course_to_lector_student(kurz, cas, varka, studenti_konkr_kurz):
 
 def main_algorithm(dict, varka):
     for kurz, cas_studenti in dict.items():           # cas_studenti is nested dict, therefore is opened on next line
-        for cas, studenti_konkr_kurz in cas_studenti.items():     # time and list of students e.g. "pondeli 13:00": [Student 1, Student 2, ...]
+        for cas, studenti_konkr_kurz in cas_studenti.items():     # time and list of students e.g. "monday 13:00": [Student 1, Student 2, ...]
             _register_course_to_lector_student(kurz, cas, varka, studenti_konkr_kurz)
 
 

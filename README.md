@@ -30,14 +30,7 @@ Output of the program is HTML document with constructed schedule visualised as a
 If input contain students without the possibility to be placed, name of the student is printed into the console. The program chooses the schedule with the least non-placed students. 
 
 
-
-## Algorithm
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
 ## Limitations
-Program places more courses to the first lector.
+Program places more courses to the first lector. And many more.
 
 
-
-## License
-For open source projects, say how it is licensed.
